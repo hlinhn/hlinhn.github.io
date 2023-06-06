@@ -1,7 +1,7 @@
 ---
-layout: page
-title: about
+layout: about
+title: Linh Nguyen's blog
 permalink: /
----
 
-My blog
+latest_posts: true
+---
