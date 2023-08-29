@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://hlinhn.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://hlinhn.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2023-08-29T07:22:42+00:00</updated><id>https://hlinhn.github.io/feed.xml</id><title type="html">blank</title><subtitle>Things I learn along the way
-</subtitle><entry><title type="html">HumanML3D word cloud</title><link href="https://hlinhn.github.io/blog/2023/humanml3d/" rel="alternate" type="text/html" title="HumanML3D word cloud" /><published>2023-08-29T00:00:00+00:00</published><updated>2023-08-29T00:00:00+00:00</updated><id>https://hlinhn.github.io/blog/2023/humanml3d</id><content type="html" xml:base="https://hlinhn.github.io/blog/2023/humanml3d/"><![CDATA[<p>I was curious about the actions in HumanML3D, so I made a simple word cloud out of the descriptions. After removing a few nuisance words (in, at, out, up, to, etc - there were a lot of person and man as well), this is what we got</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://hlinhn.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://hlinhn.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2023-08-29T07:33:11+00:00</updated><id>https://hlinhn.github.io/feed.xml</id><title type="html">blank</title><subtitle>Things I learn along the way
+</subtitle><entry><title type="html">HumanML3D actions</title><link href="https://hlinhn.github.io/blog/2023/humanml3d/" rel="alternate" type="text/html" title="HumanML3D actions" /><published>2023-08-29T00:00:00+00:00</published><updated>2023-08-29T00:00:00+00:00</updated><id>https://hlinhn.github.io/blog/2023/humanml3d</id><content type="html" xml:base="https://hlinhn.github.io/blog/2023/humanml3d/"><![CDATA[<p>I was curious about the actions in HumanML3D, so I made a simple word cloud out of the descriptions. After removing a few nuisance words (in, at, out, up, to, etc - there were a lot of person and man as well)</p>
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
@@ -7,13 +7,13 @@
 
   <picture>
     
-    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/wc-480.webp" />
-    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/wc-800.webp" />
-    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/wc-1400.webp" />
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/2023-08-29/wc-480.webp" />
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/2023-08-29/wc-800.webp" />
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/2023-08-29/wc-1400.webp" />
     
 
     <!-- Fallback to the original file -->
-    <img src="/assets/img/wc.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
+    <img src="/assets/img/2023-08-29/wc.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
 
   </picture>
 
@@ -25,7 +25,7 @@
     Simple HumanML3D word cloud from 29232 files, including the mirrored actions. We removed a lot of positional and directional words to make the actions stand out more. It seems we have a lot of walking action here.
 </div>
 
-<p>Then I realized I didn’t need to do this - I should be able to get all the verbs from the helpful markers that I discarded the first time round. Then this is what we have</p>
+<p>Then I realized I didn’t need to do this - I should be able to get all the verbs from the helpful markers that I discarded the first time round</p>
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
@@ -33,13 +33,13 @@
 
   <picture>
     
-    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/wc-verb-480.webp" />
-    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/wc-verb-800.webp" />
-    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/wc-verb-1400.webp" />
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/2023-08-29/wc-verb-480.webp" />
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/2023-08-29/wc-verb-800.webp" />
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/2023-08-29/wc-verb-1400.webp" />
     
 
     <!-- Fallback to the original file -->
-    <img src="/assets/img/wc-verb.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
+    <img src="/assets/img/2023-08-29/wc-verb.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
 
   </picture>
 
@@ -51,7 +51,7 @@
     Word cloud, taking only the words marked with VERB marker.
 </div>
 
-<p>At this point we can probably get something a little more concrete by counting the number of verbs and how many times each word appears. We ended up with 1671 unique verbs, the top ten is</p>
+<p>At this point we can probably get something a little more concrete by counting the number of verbs and how many times each word appears. We ended up with 1671 unique verbs, the top ten are</p>
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
@@ -59,13 +59,13 @@
 
   <picture>
     
-    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/hist-480.webp" />
-    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/hist-800.webp" />
-    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/hist-1400.webp" />
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/2023-08-29/hist-480.webp" />
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/2023-08-29/hist-800.webp" />
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/2023-08-29/hist-1400.webp" />
     
 
     <!-- Fallback to the original file -->
-    <img src="/assets/img/hist.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
+    <img src="/assets/img/2023-08-29/hist.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
 
   </picture>
 
@@ -74,7 +74,7 @@
     </div>
 </div>
 
-<p>As we have noted before the walking action is quite dominant. Verbs with low count included quite a lot of misspelt words as well as possibly mistagged words such as ‘rotatibg’, ‘leftwhilst’, etc.</p>]]></content><author><name></name></author><category term="random" /><category term="motion" /><summary type="html"><![CDATA[I was curious about the actions in HumanML3D, so I made a simple word cloud out of the descriptions. After removing a few nuisance words (in, at, out, up, to, etc - there were a lot of person and man as well), this is what we got]]></summary></entry><entry><title type="html">Connection between Lorentz group and rotation group</title><link href="https://hlinhn.github.io/blog/2023/lorentz/" rel="alternate" type="text/html" title="Connection between Lorentz group and rotation group" /><published>2023-06-08T00:00:00+00:00</published><updated>2023-06-08T00:00:00+00:00</updated><id>https://hlinhn.github.io/blog/2023/lorentz</id><content type="html" xml:base="https://hlinhn.github.io/blog/2023/lorentz/"><![CDATA[<p>The rotation group can be thought of as \(3\times 3\) matrices \(R\) that satisfies \(I = R^{T}IR\), while the Lorentz group is \(\eta = \Lambda^{T}\eta\Lambda\), where \(I\) is the Euclidean metric and \(\eta\) is Lorentzian<sup><a href="#1">[1]</a></sup>.</p>
+<p>As we have noted before the walking action is quite dominant. Verbs with low count included quite a lot of misspelt words as well as possibly mistagged words such as ‘rotatibg’, ‘leftwhilst’, etc.</p>]]></content><author><name></name></author><category term="random" /><category term="motion" /><summary type="html"><![CDATA[I was curious about the actions in HumanML3D, so I made a simple word cloud out of the descriptions. After removing a few nuisance words (in, at, out, up, to, etc - there were a lot of person and man as well)]]></summary></entry><entry><title type="html">Connection between Lorentz group and rotation group</title><link href="https://hlinhn.github.io/blog/2023/lorentz/" rel="alternate" type="text/html" title="Connection between Lorentz group and rotation group" /><published>2023-06-08T00:00:00+00:00</published><updated>2023-06-08T00:00:00+00:00</updated><id>https://hlinhn.github.io/blog/2023/lorentz</id><content type="html" xml:base="https://hlinhn.github.io/blog/2023/lorentz/"><![CDATA[<p>The rotation group can be thought of as \(3\times 3\) matrices \(R\) that satisfies \(I = R^{T}IR\), while the Lorentz group is \(\eta = \Lambda^{T}\eta\Lambda\), where \(I\) is the Euclidean metric and \(\eta\) is Lorentzian<sup><a href="#1">[1]</a></sup>.</p>
 
 <p><a id="1"><sub>[1]</sub></a>
 <sub>Carroll Sean (2003). Spacetime and Geometry - an Introduction to General Relativity</sub></p>]]></content><author><name></name></author><category term="til" /><summary type="html"><![CDATA[The rotation group can be thought of as \(3\times 3\) matrices \(R\) that satisfies \(I = R^{T}IR\), while the Lorentz group is \(\eta = \Lambda^{T}\eta\Lambda\), where \(I\) is the Euclidean metric and \(\eta\) is Lorentzian[1].]]></summary></entry></feed>
