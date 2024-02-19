@@ -10,7 +10,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>news | Linh  Nguyen</title>
+    <title>Physics in human motion | Linh  Nguyen</title>
     <meta name="author" content="Linh  Nguyen">
     <meta name="description" content="Things I learn along the way
 ">
@@ -38,7 +38,7 @@
     <link rel="shortcut icon" href="/assets/img/favicon.ico">
     
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="canonical" href="https://hlinhn.github.io/news/">
+    <link rel="canonical" href="https://hlinhn.github.io/blog/2024/physics/">
 
     <!-- Dark Mode -->
     
@@ -77,8 +77,8 @@
               </li>
               
               <!-- Blog -->
-              <li class="nav-item ">
-                <a class="nav-link" href="/blog/">blog</a>
+              <li class="nav-item active">
+                <a class="nav-link" href="/blog/">blog<span class="sr-only">(current)</span></a>
               </li>
 
               <!-- Other pages -->
@@ -107,46 +107,83 @@
     <!-- Content -->
     <div class="container mt-5">
       
-        <!-- page.html -->
-        <div class="post">
+        <!-- _layouts/post.html -->
 
-          <header class="post-header">
-            <h1 class="post-title">news</h1>
-            <p class="post-description"></p>
-          </header>
+<div class="post">
 
-          <article>
-                      <div class="news">
-            <div class="table-responsive">
-              <table class="table table-sm table-borderless">
-              
-                <tr>
-                  <th scope="row">Jan 15, 2016</th>
-                  <td>
-                    A simple inline announcement with Markdown emoji! <img class="emoji" title=":sparkles:" alt=":sparkles:" src="https://github.githubassets.com/images/icons/emoji/unicode/2728.png" height="20" width="20"> <img class="emoji" title=":smile:" alt=":smile:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f604.png" height="20" width="20">
+  <header class="post-header">
+    <h1 class="post-title">Physics in human motion</h1>
+    <p class="post-meta">February 19, 2024</p>
+    <p class="post-tags">
+      <a href="/blog/2024"> <i class="fas fa-calendar fa-sm"></i> 2024 </a>
+        ·  
+        <a href="/blog/tag/physics">
+          <i class="fas fa-hashtag fa-sm"></i> physics</a>  
+          
 
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">Nov 7, 2015</th>
-                  <td>
-                    <a class="news-title" href="/news/announcement_2/">A long announcement with details</a>
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">Oct 22, 2015</th>
-                  <td>
-                    A simple inline announcement.
+    </p>
+  </header>
 
-                  </td>
-                </tr>
-              </table>
-            </div>
-          </div>
+  <article class="post-content">
+    
+    <div id="markdown-content">
+      <p>There are 3 levels of physics knowledge integration into deep learning methods<sup><a href="#1">[1]</a></sup>:</p>
+<ul>
+  <li>use the data generated from physics model. This is the least involved level, where the model equations are only used as a source to generate data for supervised training.</li>
+  <li>use soft constraints in the form of physics based loss term. This is where approaches like PINN belong.</li>
+  <li>use differentiable physics simulator. This is the tightest coupling currently, where the network weights are updated with the gradients calculated from an integrated simulator.</li>
+</ul>
 
-          </article>
+<p>In human motion related problems, supervised training with real data dominates. Simulated data are not as popular because of the complexity and multimodality of human movement. However, we still can find some works that are close to this approach, such as PhysDiff<sup><a href="#5">[5]</a></sup>, which provides physics denoised data for the diffusion process by pushing the intermediate results through a physics simulator.</p>
 
-        </div>
+<p>The second approach is not usually utilized the same way as in PINN, because the PDE describing human motion includes discrete contact terms that are difficult to get gradients from. 
+However, intuitive physics loss terms such as simple stability and ground constraints are getting more attention, for example IPMAN<sup><a href="#2">[2]</a></sup>. Another slightly related example is InterDiff<sup><a href="#4">[4]</a></sup>, where the trajectories of the interacting objects are kept simple by transformation to appropriate frames.</p>
+
+<p>One work that uses the final approach is <strong>Weakly supervised learning of human dynamics</strong><sup><a href="#3">[3]</a></sup>. The paper did not incorporate a physics simulator, instead it used simple forward dynamics calculations supplied with prediction of contact information (which is also the approach of DnD<sup><a href="#6">[6]</a></sup>). It would be interesting to check if SIP training would improve its performance. Probably likewise for DnD, however the training time could be prohibitive. Another paper much closer to the spirit of the final approach is DiffPhy<sup><a href="#7">[7]</a></sup>, where TDS is used in the reconstruction loop.</p>
+
+<p><a id="1"><sub>[1]</sub></a>
+<sub>Thuerey, Nils et al. “Physics-based Deep Learning.” ArXiv abs/2109.05237 (2021): n. pag.</sub></p>
+
+<p><a id="2"><sub>[2]</sub></a>
+<sub>Tripathi, Shashank et al. “3D Human Pose Estimation via Intuitive Physics.” 2023 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) (2023): 4713-4725.</sub></p>
+
+<p><a id="3"><sub>[3]</sub></a><sub> Zell, Petrissa et al. “Weakly-supervised Learning of Human Dynamics.” European Conference on Computer Vision (2020).</sub></p>
+
+<p><a id="4"><sub>[4]</sub></a><sub> Xu, Sirui et al. “InterDiff: Generating 3D Human-Object Interactions with Physics-Informed Diffusion.” 2023 IEEE/CVF International Conference on Computer Vision (ICCV) (2023): 14882-14894.</sub></p>
+
+<p><a id="5"><sub>[5]</sub></a><sub> Yuan, Ye et al. “PhysDiff: Physics-Guided Human Motion Diffusion Model.” 2023 IEEE/CVF International Conference on Computer Vision (ICCV) (2022): 15964-15975.</sub></p>
+
+<p><a id="6"><sub>[6]</sub></a><sub> Li, Jiefeng et al. “D&amp;D: Learning Human Dynamics from Dynamic Camera.” European Conference on Computer Vision (2022).</sub></p>
+
+<p><a id="7"><sub>[7]</sub></a><sub> Gartner, Erik et al. “Differentiable Dynamics for Articulated 3d Human Motion Reconstruction.” 2022 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) (2022): 13180-13190.</sub></p>
+
+    </div>
+  </article>
+
+
+  
+    
+    <br>
+    <hr>
+    <br>
+    <ul class="list-disc pl-8"></ul>
+
+    <!-- Adds related posts to the end of an article -->
+    <h2 class="text-3xl font-semibold mb-4 mt-12">Enjoy Reading This Article?</h2>
+    <p class="mb-2">Here are some more articles you might like to read next:</p>
+  
+
+  <li class="my-2">
+    <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="/blog/2023/humanml3d/">HumanML3D actions</a>
+  </li>
+
+  
+
+  <li class="my-2">
+    <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="/blog/2023/lorentz/">Connection between Lorentz group and rotation group</a>
+  </li>
+
+</div>
 
       
     </div>

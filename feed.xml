@@ -1,5 +1,33 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://hlinhn.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://hlinhn.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2023-08-29T07:33:11+00:00</updated><id>https://hlinhn.github.io/feed.xml</id><title type="html">blank</title><subtitle>Things I learn along the way
-</subtitle><entry><title type="html">HumanML3D actions</title><link href="https://hlinhn.github.io/blog/2023/humanml3d/" rel="alternate" type="text/html" title="HumanML3D actions" /><published>2023-08-29T00:00:00+00:00</published><updated>2023-08-29T00:00:00+00:00</updated><id>https://hlinhn.github.io/blog/2023/humanml3d</id><content type="html" xml:base="https://hlinhn.github.io/blog/2023/humanml3d/"><![CDATA[<p>I was curious about the actions in HumanML3D, so I made a simple word cloud out of the descriptions. After removing a few nuisance words (in, at, out, up, to, etc - there were a lot of person and man as well)</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://hlinhn.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://hlinhn.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2024-02-19T08:14:32+00:00</updated><id>https://hlinhn.github.io/feed.xml</id><title type="html">blank</title><subtitle>Things I learn along the way
+</subtitle><entry><title type="html">Physics in human motion</title><link href="https://hlinhn.github.io/blog/2024/physics/" rel="alternate" type="text/html" title="Physics in human motion" /><published>2024-02-19T00:00:00+00:00</published><updated>2024-02-19T00:00:00+00:00</updated><id>https://hlinhn.github.io/blog/2024/physics</id><content type="html" xml:base="https://hlinhn.github.io/blog/2024/physics/"><![CDATA[<p>There are 3 levels of physics knowledge integration into deep learning methods<sup><a href="#1">[1]</a></sup>:</p>
+<ul>
+  <li>use the data generated from physics model. This is the least involved level, where the model equations are only used as a source to generate data for supervised training.</li>
+  <li>use soft constraints in the form of physics based loss term. This is where approaches like PINN belong.</li>
+  <li>use differentiable physics simulator. This is the tightest coupling currently, where the network weights are updated with the gradients calculated from an integrated simulator.</li>
+</ul>
+
+<p>In human motion related problems, supervised training with real data dominates. Simulated data are not as popular because of the complexity and multimodality of human movement. However, we still can find some works that are close to this approach, such as PhysDiff<sup><a href="#5">[5]</a></sup>, which provides physics denoised data for the diffusion process by pushing the intermediate results through a physics simulator.</p>
+
+<p>The second approach is not usually utilized the same way as in PINN, because the PDE describing human motion includes discrete contact terms that are difficult to get gradients from. 
+However, intuitive physics loss terms such as simple stability and ground constraints are getting more attention, for example IPMAN<sup><a href="#2">[2]</a></sup>. Another slightly related example is InterDiff<sup><a href="#4">[4]</a></sup>, where the trajectories of the interacting objects are kept simple by transformation to appropriate frames.</p>
+
+<p>One work that uses the final approach is <strong>Weakly supervised learning of human dynamics</strong><sup><a href="#3">[3]</a></sup>. The paper did not incorporate a physics simulator, instead it used simple forward dynamics calculations supplied with prediction of contact information (which is also the approach of DnD<sup><a href="#6">[6]</a></sup>). It would be interesting to check if SIP training would improve its performance. Probably likewise for DnD, however the training time could be prohibitive. Another paper much closer to the spirit of the final approach is DiffPhy<sup><a href="#7">[7]</a></sup>, where TDS is used in the reconstruction loop.</p>
+
+<p><a id="1"><sub>[1]</sub></a>
+<sub>Thuerey, Nils et al. “Physics-based Deep Learning.” ArXiv abs/2109.05237 (2021): n. pag.</sub></p>
+
+<p><a id="2"><sub>[2]</sub></a>
+<sub>Tripathi, Shashank et al. “3D Human Pose Estimation via Intuitive Physics.” 2023 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) (2023): 4713-4725.</sub></p>
+
+<p><a id="3"><sub>[3]</sub></a><sub> Zell, Petrissa et al. “Weakly-supervised Learning of Human Dynamics.” European Conference on Computer Vision (2020).</sub></p>
+
+<p><a id="4"><sub>[4]</sub></a><sub> Xu, Sirui et al. “InterDiff: Generating 3D Human-Object Interactions with Physics-Informed Diffusion.” 2023 IEEE/CVF International Conference on Computer Vision (ICCV) (2023): 14882-14894.</sub></p>
+
+<p><a id="5"><sub>[5]</sub></a><sub> Yuan, Ye et al. “PhysDiff: Physics-Guided Human Motion Diffusion Model.” 2023 IEEE/CVF International Conference on Computer Vision (ICCV) (2022): 15964-15975.</sub></p>
+
+<p><a id="6"><sub>[6]</sub></a><sub> Li, Jiefeng et al. “D&amp;D: Learning Human Dynamics from Dynamic Camera.” European Conference on Computer Vision (2022).</sub></p>
+
+<p><a id="7"><sub>[7]</sub></a><sub> Gartner, Erik et al. “Differentiable Dynamics for Articulated 3d Human Motion Reconstruction.” 2022 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) (2022): 13180-13190.</sub></p>]]></content><author><name></name></author><category term="physics" /><summary type="html"><![CDATA[There are 3 levels of physics knowledge integration into deep learning methods[1]: use the data generated from physics model. This is the least involved level, where the model equations are only used as a source to generate data for supervised training. use soft constraints in the form of physics based loss term. This is where approaches like PINN belong. use differentiable physics simulator. This is the tightest coupling currently, where the network weights are updated with the gradients calculated from an integrated simulator.]]></summary></entry><entry><title type="html">HumanML3D actions</title><link href="https://hlinhn.github.io/blog/2023/humanml3d/" rel="alternate" type="text/html" title="HumanML3D actions" /><published>2023-08-29T00:00:00+00:00</published><updated>2023-08-29T00:00:00+00:00</updated><id>https://hlinhn.github.io/blog/2023/humanml3d</id><content type="html" xml:base="https://hlinhn.github.io/blog/2023/humanml3d/"><![CDATA[<p>I was curious about the actions in HumanML3D, so I made a simple word cloud out of the descriptions. After removing a few nuisance words (in, at, out, up, to, etc - there were a lot of person and man as well)</p>
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
