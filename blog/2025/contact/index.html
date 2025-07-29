@@ -10,7 +10,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>physics | Linh  Nguyen</title>
+    <title>Contact models | Linh  Nguyen</title>
     <meta name="author" content="Linh  Nguyen">
     <meta name="description" content="Things I learn along the way
 ">
@@ -38,7 +38,7 @@
     <link rel="shortcut icon" href="/assets/img/favicon.ico">
     
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="canonical" href="https://hlinhn.github.io/blog/tag/physics/">
+    <link rel="canonical" href="https://hlinhn.github.io/blog/2025/contact/">
 
     <!-- Dark Mode -->
     
@@ -107,34 +107,68 @@
     <!-- Content -->
     <div class="container mt-5">
       
-        <div class="post">
+        <!-- _layouts/post.html -->
+
+<div class="post">
 
   <header class="post-header">
-    <h1 class="post-title"> <i class="fas fa-hashtag fa-sm"></i> physics </h1>
-    <p class="post-description"> an archive of posts with this tag </p>
+    <h1 class="post-title">Contact models</h1>
+    <p class="post-meta">July 29, 2025</p>
+    <p class="post-tags">
+      <a href="/blog/2025"> <i class="fas fa-calendar fa-sm"></i> 2025 </a>
+        ·  
+        <a href="/blog/tag/physics">
+          <i class="fas fa-hashtag fa-sm"></i> physics</a>  
+          
+
+    </p>
   </header>
 
-  <article>
-    <div class="table-responsive">
-      <table class="table table-sm table-borderless">
-        
-        <tr>
-          <th scope="row">Jul 29, 2025</th>
-          <td>
-              <a class="post-link" href="/blog/2025/contact/">Contact models</a>
-          </td>
-        </tr>
-      
-        <tr>
-          <th scope="row">Feb 19, 2024</th>
-          <td>
-              <a class="post-link" href="/blog/2024/physics/">Physics in human motion</a>
-          </td>
-        </tr>
-      
-      </table>
+  <article class="post-content">
+    
+    <div id="markdown-content">
+      <h3 id="introduction">Introduction</h3>
+<p>In human motion generation and recovery, contact events are frequently used to judge whether interactions with the environment are plausible. This is because meaningful motions are only possible through interactions with the world: from simple everyday motions like walking or picking up an object to more difficult actions such as parkour or gymnastics.</p>
+
+<p>Detecting contact events are usually done via proximity if 3D models are known. Alternatively a model can also be trained to detect contact between body and environment in 2D images or videos. Measuring the magnitude of the resulting forces is a different matter altogether, however. In this post we discuss some common methods of doing so.</p>
+
+<p>Why do we care about the magnitude of the contact forces, especially in the human motion related tasks? While kinematics observations alone are very successful in recreating plausible-looking motions, the lack of dynamics modeling means that rarer motions are difficult to replicate, and generalizations to unseen scenes and interactions suffer. Success in creating plausible trajectories does not imply success in inferring underlying dynamics, as shown in <sup><a href="#1">[1]</a></sup></p>
+
+<p><a id="1"><sub>[1]</sub></a>
+<sub>Vafa, K., Chang, P.G., Rambachan, A., &amp; Mullainathan, S. (2025). What Has a Foundation Model Found? Using Inductive Bias to Probe for World Models.</sub></p>
+
+
     </div>
   </article>
+
+
+  
+    
+    <br>
+    <hr>
+    <br>
+    <ul class="list-disc pl-8"></ul>
+
+    <!-- Adds related posts to the end of an article -->
+    <h2 class="text-3xl font-semibold mb-4 mt-12">Enjoy Reading This Article?</h2>
+    <p class="mb-2">Here are some more articles you might like to read next:</p>
+  
+
+  <li class="my-2">
+    <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="/blog/2024/physics/">Physics in human motion</a>
+  </li>
+
+  
+
+  <li class="my-2">
+    <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="/blog/2023/humanml3d/">HumanML3D actions</a>
+  </li>
+
+  
+
+  <li class="my-2">
+    <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="/blog/2023/lorentz/">Connection between Lorentz group and rotation group</a>
+  </li>
 
 </div>
 
